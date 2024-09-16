@@ -1,8 +1,8 @@
-import style from "./style.module.css"
+import styled from "./styled.module"
 
-const Button = ({ children, ...props }) => {
+const Button = ({ title, ...props }: { title: string }) => {
     return (
-        <button {...props} className={style.button}>{children}</button>
+        <button {...props} className={styled.Button}>{title}</button>
     )
 }
 

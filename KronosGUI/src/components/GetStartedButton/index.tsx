@@ -1,16 +1,18 @@
-import style from "./style.module.css"
+import styled from "./styled.module";
 
-const Button = ({ children, ...props }) => {
+const Button = ({ title, ...props }: { title: string }) => {
     const scrollToTarget = () => {
         window.scrollTo({
             top: 835,
-            behavior: 'smooth'
+            behavior: "smooth",
         });
     };
 
     return (
-        <button onClick={scrollToTarget} {...props} className={style.button}>{children}</button>
-    )
-}
+        <button onClick={scrollToTarget} {...props} className={styled.Button}>
+            {title}
+        </button>
+    );
+};
 
 export default Button;
