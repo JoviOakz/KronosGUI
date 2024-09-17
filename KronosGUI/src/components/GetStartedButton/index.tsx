@@ -1,6 +1,6 @@
 import { StyledButton } from "./styled.module";
 
-const Button = ({ title, ...props }: { title: string }) => {
+const Button = ({ children, ...props }: { children: string }) => {
     const scrollToTarget = () => {
         window.scrollTo({
             top: 835,
@@ -10,7 +10,7 @@ const Button = ({ title, ...props }: { title: string }) => {
 
     return (
         <StyledButton onClick={scrollToTarget} {...props}>
-            {title}
+            {children}
         </StyledButton>
     );
 };

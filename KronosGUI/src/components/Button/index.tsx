@@ -1,8 +1,8 @@
 import { StyledButton } from "./styled.module";
 
-const Button = ({ title, ...props }: { title: string }) => {
+const Button = ({ children, ...props }: { children: string }) => {
     return (
-        <StyledButton {...props}>{title}</StyledButton>
+        <StyledButton {...props}>{children}</StyledButton>
     )
 }
 
