@@ -1,4 +1,4 @@
-import styled from "./styled.module";
+import { StyledButton } from "./styled.module";
 
 const Button = ({ title, ...props }: { title: string }) => {
     const scrollToTarget = () => {
@@ -9,9 +9,9 @@ const Button = ({ title, ...props }: { title: string }) => {
     };
 
     return (
-        <button onClick={scrollToTarget} {...props} className={styled.Button}>
+        <StyledButton onClick={scrollToTarget} {...props}>
             {title}
-        </button>
+        </StyledButton>
     );
 };
 

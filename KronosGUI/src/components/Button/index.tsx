@@ -1,8 +1,8 @@
-import styled from "./styled.module"
+import { StyledButton } from "./styled.module";
 
 const Button = ({ title, ...props }: { title: string }) => {
     return (
-        <button {...props} className={styled.Button}>{title}</button>
+        <StyledButton {...props}>{title}</StyledButton>
     )
 }
 

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Button = styled.button`
+export const StyledButton = styled.button`
   padding: 0.8em 1.8em;
   border: 2px solid #17c3b2;
   position: relative;
@@ -35,6 +35,4 @@ const Button = styled.button`
   &:hover {
     color: #111;
   }
-`;
-
-export default { Button };
+`

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Button = styled.button`
+export const StyledButton = styled.button`
   --color: #40497f;
   padding: 0.2em 1.4em;
   background-color: transparent;
@@ -53,6 +53,4 @@ const Button = styled.button`
   &:active {
     filter: brightness(0.8);
   }
-`;
-
-export default { Button };
+`
