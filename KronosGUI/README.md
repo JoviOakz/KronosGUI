@@ -39,7 +39,7 @@ render(
 **RouterDOM:**
 - npm install react-router-dom
 
-**Create src/routes/MainRoutes.ts, and put the code below:**
+**Create src/routes/MainRoutes.tsx, and put the code below:**
 
 ```
 import { createBrowserRouter } from "react-router-dom";
