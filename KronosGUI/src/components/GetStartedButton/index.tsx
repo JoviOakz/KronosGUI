@@ -9,9 +9,7 @@ const Button = ({ children, ...props }: { children: string }) => {
     };
 
     return (
-        <StyledButton onClick={scrollToTarget} {...props}>
-            {children}
-        </StyledButton>
+        <StyledButton onClick={scrollToTarget} {...props}>{children}</StyledButton>
     );
 };
 
