@@ -1,22 +1,23 @@
+import { CardContainer, ContentWrapper, Description, ImageWrapper, Title, TitleWrapper } from "./styled.module";
 import { Link } from "react-router-dom";
-import Button from "./Button/Button";
+import Button from "../Button";
 
-const InformationCard = ({ children, mapName, mapImage, ...props }) => {
+const InformationCard = ({ children, mapName, mapImage, ...props }: { children: string, mapName: string, mapImage: string }) => {
     return (
-        <div {...props} className="flex flex-col w-[45%] h-[92vh] rounded-3xl bg-white shadow-lg shadow-slate-900">
-            <div>
-                <img className="rounded-t-[20px]" src={mapImage} />
-            </div>
+        <CardContainer {...props}>
+            <ImageWrapper>
+                <img src={mapImage} />
+            </ImageWrapper>
 
-            <div className="flex justify-center p-4">
-                <p className="font-serif text-[32px]">{mapName}</p>
-            </div>
+            <TitleWrapper>
+                <Title>{mapName}</Title>
+            </TitleWrapper>
 
-            <div className="flex flex-col h-full justify-between items-center pb-8">
-                <p className="flex pl-10 pr-10 text-justify">{children}</p>
-                <Link preventScrollReset={false} to={"/" + mapName.toLowerCase().replaceAll(' ', '-')}><Button>Enter</Button></Link>
-            </div>
-        </div>
+            <ContentWrapper>
+                <Description>{children}</Description>
+                <Link preventScrollReset={false} to={"/" + mapName.toLowerCase().replace(/ /g, '-')}><Button>Enter</Button></Link>
+            </ContentWrapper>
+        </CardContainer>
     )
 }
 
