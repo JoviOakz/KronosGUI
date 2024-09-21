@@ -12,7 +12,7 @@
 
 **Example using styled components, in the code below:**
 
-```
+```ruby
 // Create a Title component that'll render an <h1> tag with some styles
 const Title = styled.h1`
   font-size: 1.5em;
@@ -41,7 +41,7 @@ render(
 
 **Create src/routes/MainRoutes.tsx, and put the code below:**
 
-```
+```ruby
 import { createBrowserRouter } from "react-router-dom";
 import HomePage from "../pages/HomePage"; // Example
 
@@ -55,7 +55,7 @@ export const routes = createBrowserRouter([
 
 **And in your src/main.tsx, put the code below:**
 
-```
+```ruby
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { RouterProvider } from 'react-router-dom'
