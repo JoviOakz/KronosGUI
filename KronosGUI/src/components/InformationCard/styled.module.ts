@@ -7,13 +7,15 @@ export const CardContainer = styled.div`
     height: 92vh;
     border-radius: 1.5rem;
     background-color: white;
-    box-shadow: 0 10px 15px -3px rgba(15, 23, 42, 0.1), 0 4px 6px -2px rgba(15, 23, 42, 0.05);
+    box-shadow: 0 10px 15px -3px rgba(15, 23, 42, 0.1), 0 4px 6px -2px rgba(15, 23, 42, 1);
 `;
 
 export const ImageWrapper = styled.div`
     img {
-    border-top-left-radius: 1.25rem;
-    border-top-right-radius: 1.25rem;
+        width: 100%;
+        height: 100%;
+        border-top-left-radius: 1.25rem;
+        border-top-right-radius: 1.25rem;
     }
 `;
 

@@ -4,13 +4,14 @@ import { Link } from "react-router-dom";
 export const NavbarContainer = styled.div<{ isHome: boolean }>`
     width: 100%;
     height: 8vh;
-    padding: 0.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     display: flex;
     position: ${(props) => (props.isHome ? 'fixed' : 'relative')};
     background-color: ${(props) => (props.isHome ? 'transparent' : '#1e293b')};
     backdrop-filter: ${(props) => (props.isHome ? 'blur(10px)' : 'none')};
     z-index: ${(props) => (props.isHome ? 2 : 'auto')};
-    box-shadow: ${(props) => (props.isHome ? 'none' : '0 4px 10px rgba(107, 114, 128, 0.4)')};
+    box-shadow: ${(props) => (props.isHome ? 'none' : '0 4px 10px rgba(107, 114, 128, 0.9)')};
 `;
 
 export const LogoWrapper = styled.div`
@@ -19,7 +20,7 @@ export const LogoWrapper = styled.div`
     justify-content: center;
 
     img {
-    border-radius: 50%;
+        border-radius: 50%;
     }
 `;
 
@@ -45,6 +46,6 @@ export const NavbarLink = styled(Link)`
     text-decoration: none;
 
     &:hover {
-    color: #0284c7;
+        color: #0284c7;
     }
 `;

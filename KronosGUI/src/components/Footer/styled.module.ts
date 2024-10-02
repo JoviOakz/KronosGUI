@@ -7,7 +7,7 @@ export const FooterContainer = styled.div`
     width: 100%;
     height: 32vh;
     background-color: #01091C;
-    box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1), 0 -2px 4px -2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1), 0 -2px 4px -2px rgba(0, 0, 0, 0.9);
 `;
 
 export const FlexContainer = styled.div`
@@ -19,7 +19,7 @@ export const FlexContainer = styled.div`
 `;
 
 export const Line = styled.div`
-    width: 80px;
+    width: 200px;
     height: 2px;
     background-color: rgba(108, 117, 125, 0.4);
 `;
@@ -31,7 +31,7 @@ export const SocialLinks = styled.ul`
 
 export const ImageLink = styled.a`
     img {
-    width: 24px;
+        width: 44px;
     }
 `;
 
@@ -61,7 +61,7 @@ export const NavLinks = styled.ul`
 export const NavLink = styled.a`
     color: #E2E8F0;
     &:hover {
-    color: #0EA5E9;
+        color: #0EA5E9;
     }
 `;
 

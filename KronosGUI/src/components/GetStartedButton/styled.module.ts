@@ -13,26 +13,27 @@ export const StyledButton = styled.button`
     z-index: 1;
     font-family: inherit;
     color: #17c3b2;
+    cursor: pointer;
 
     &::before {
-    content: "";
-    width: 0;
-    height: 300%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(45deg);
-    background: #17c3b2;
-    transition: 0.5s ease;
-    display: block;
-    z-index: -1;
+        content: "";
+        width: 0;
+        height: 300%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        background: #17c3b2;
+        transition: 0.5s ease;
+        display: block;
+        z-index: -1;
     }
 
     &:hover::before {
-    width: 105%;
+        width: 105%;
     }
 
     &:hover {
-    color: #111;
+        color: #111;
     }
 `;

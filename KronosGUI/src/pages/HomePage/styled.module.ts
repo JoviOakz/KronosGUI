@@ -11,7 +11,7 @@ export const GetStarted = styled.div`
 `;
 
 export const Spacer = styled.div`
-    height: 30vh;
+    height: 50vh;
     background-color: #091036;
 `;
 
