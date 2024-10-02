@@ -15,7 +15,7 @@ export const NavbarContainer = styled.div<{ isHome: boolean }>`
 `;
 
 export const LogoWrapper = styled.div`
-    width: 8.33%;
+    width: 10%;
     display: flex;
     justify-content: center;
 
@@ -25,7 +25,7 @@ export const LogoWrapper = styled.div`
 `;
 
 export const NavbarContent = styled.div`
-    width: 83.33%;
+    width: 85%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,6 +33,41 @@ export const NavbarContent = styled.div`
 
 export const NavbarTitle = styled.div`
     color: white;
+`;
+
+export const DropdownContainer = styled.div`
+    position: relative;
+    width: 160px;
+`;
+
+export const DropdownHeader = styled.div`
+    padding: 10px;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+`;
+
+export const DropdownList = styled.ul`
+    position: absolute;
+    width: 100%;
+    list-style: none;
+    background-color: white;
+`;
+
+export const DropdownItem = styled.li`
+    padding: 10px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #f0f0f0;
+    }
+`;
+
+export const Arrow = styled.span<{ isOpen: boolean }>`
+    transform: ${({ isOpen }) => (isOpen ? 'rotate(180deg)' : 'rotate(0deg)')};
+    transition: transform 0.3s ease;
 `;
 
 export const NavbarLinks = styled.ul`

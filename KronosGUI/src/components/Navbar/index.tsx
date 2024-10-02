@@ -1,8 +1,8 @@
+import { LogoWrapper, NavbarContainer, NavbarContent, NavbarLink, NavbarLinks, NavbarTitle, DropdownContainer, DropdownHeader, DropdownList, DropdownItem, Arrow } from "./styled.module";
 import { useNavigate } from "react-router-dom";
-import Dropdown, { Option } from 'react-dropdown';
 import Logo from "/Logo.jfif";
 import 'react-dropdown/style.css';
-import { LogoWrapper, NavbarContainer, NavbarContent, NavbarLink, NavbarLinks, NavbarTitle } from "./styled.module";
+import { useState } from "react";
 
 interface INavbar {
     mapName: string;
@@ -11,17 +11,23 @@ interface INavbar {
 
 const Navbar: React.FC<INavbar> = ({ mapName, isHome }) => {
     const navigate = useNavigate();
-    const options: Option[] = [
+    const [isOpen, setIsOpen] = useState(false);
+    const [selectedMap, setSelectedMap] = useState<string | null>(null);
+
+    const options = [
         { value: 'shadows-of-evil', label: 'Shadows of Evil' },
-        { value: 'der-eisendrache', label: 'Der Eisendrache' },
         { value: 'the-giant', label: 'The Giant' },
+        { value: 'der-eisendrache', label: 'Der Eisendrache' },
         { value: 'zetsubou-no-shima', label: 'Zetsubou no Shima' },
         { value: 'gorod-krovi', label: 'Gorod Krovi' }
     ];
-    const defaultOption = 'Choose a Map';
 
-    const handleDropdownChange = (option: Option) => {
+    const toggleDropdown = () => setIsOpen(!isOpen);
+
+    const handleSelect = (option: { value: string, label: string }) => {
+        setSelectedMap(option.label);
         navigate(`/${option.value}`);
+        setIsOpen(false);
     };
 
     return (
@@ -35,13 +41,27 @@ const Navbar: React.FC<INavbar> = ({ mapName, isHome }) => {
                 <div>
                     <NavbarLinks>
                         <NavbarLink to="/">Home</NavbarLink>
-                        <Dropdown options={options} onChange={handleDropdownChange} value={defaultOption} />
+                        <DropdownContainer>
+                            <DropdownHeader onClick={toggleDropdown}>
+                                {selectedMap || "Choose a Map"}
+                                <Arrow isOpen={isOpen}>▼</Arrow>
+                            </DropdownHeader>
+                            {isOpen && (
+                                <DropdownList>
+                                    {options.map((option) => (
+                                        <DropdownItem key={option.value} onClick={() => handleSelect(option)}>
+                                            {option.label}
+                                        </DropdownItem>
+                                    ))}
+                                </DropdownList>
+                            )}
+                        </DropdownContainer>
                         <NavbarLink to="/">About</NavbarLink>
                     </NavbarLinks>
                 </div>
             </NavbarContent>
         </NavbarContainer>
-    )
-}
+    );
+};
 
 export default Navbar;
