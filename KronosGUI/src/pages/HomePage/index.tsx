@@ -8,22 +8,22 @@ import TG from "/CardMapsImg/TG-thumb.jfif";
 import ZS from "/CardMapsImg/ZS-thumb.jpg";
 import GK from "/CardMapsImg/GK-thumb.jpg"
 
-const Home = () => {
+const HomePage = () => {
     return (
-        <PageEnveloper navProps={{ mapName: "KronosGUI" }}>
+        <PageEnveloper mapName="KronosGUI" isHome={true}>
             <div>
                 <div className="flex justify-center items-center h-[113vh] bg-cover" style={{ backgroundImage: `url(${Background})` }}>
-                    <a href="#shadowsOfEvil"><Button>Get started</Button></a>
+                    <a href="#scrollDown"><Button>Get started</Button></a>
                 </div>
 
                 <div className="h-[30vh] bg-[#091036]" />
 
                 <div className="bg-gradient-to-b from-[#091036] from-5% via-[#384070] to-[#384070]">
                     <div className="flex flex-wrap justify-around gap-12 p-8">
-                        <InformationCard id="shadowsOfEvil" mapName={"The Giant"} mapImage={TG}>
+                        <InformationCard id="scrollDown" mapName={"The Giant"} mapImage={TG}>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt neque arcu, a tempor felis ullamcorper a. Etiam mattis blandit ipsum at ornare. Sed et libero non diam elementum faucibus. Nunc congue eget sapien sed cursus. Nullam massa est, eleifend at velit a, ullamcorper sodales nisi. Morbi volutpat rhoncus nisi sed semper. Vestibulum diam dui, scelerisque quis elit eget, imperdiet elementum nisl. Maecenas vulputate, nunc a congue condimentum, augue diam convallis felis, ac tempus dui nisl id odio. Etiam in ipsum porta est ultrices iaculis a nec risus. Donec elementum dui nunc, sed auctor nulla lobortis euismod. Vestibulum feugiat odio ac laoreet pharetra. Sed mollis ipsum augue, vitae consectetur diam posuere eget. Nam mattis leo at nisl mattis vestibulum. Vivamus gravida lacinia leo, nec facilisis nunc suscipit blandit. Nulla a augue quis est feugiat ornare non sit amet orci. Nullam ullamcorper enim eu nibh imperdiet, in vehicula nulla consequat.
                         </InformationCard>
-                        <InformationCard id="shadowsOfEvil" mapName={"Shadows of Evil"} mapImage={SOE}>
+                        <InformationCard mapName={"Shadows of Evil"} mapImage={SOE}>
                             Shadows of Evil is the eighteenth (chronologically third) Zombies map. It is the first Zombies map in Black Ops 3. The setting takes place in the fictional city of Morg City, from the 1940s, where it introduces four new characters, Nero Blackstone, Jessica Rose, Jack Vincent and Floyd Campbell as they are transported to a nightmarish realm by the Shadow Man, a supernatural being, leader of the Apothicons.
                         </InformationCard>
                         <InformationCard mapName={"Der Eisendrache"} mapImage={DE}>
@@ -42,4 +42,4 @@ const Home = () => {
     )
 }
 
-export default Home;
+export default HomePage;

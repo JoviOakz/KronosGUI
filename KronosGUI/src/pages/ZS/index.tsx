@@ -2,7 +2,7 @@ import PageEnveloper from "../../components/PageEnveloper";
 
 const ZS = () => {
     return (
-        <PageEnveloper navProps={{ mapName: "Zetsubou no Shima", isHome: false }}>
+        <PageEnveloper mapName="Zetsubou no Shima" isHome={false}>
             <div className="min-h-[92vh]">
 
             </div>

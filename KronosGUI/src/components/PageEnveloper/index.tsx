@@ -1,16 +1,23 @@
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 import { ScrollRestoration } from "react-router-dom";
+import React from "react";
 
-const PageEnveloper = ({ children, ...navProps }: { children: any }) => {
+interface PageEnveloperProps {
+    children: React.ReactNode;
+    mapName: string;
+    isHome: boolean;
+}
+
+const PageEnveloper: React.FC<PageEnveloperProps> = ({ children, mapName, isHome }) => {
     return (
         <>
             <ScrollRestoration />
-            <Navbar {...navProps} />
+            <Navbar mapName={mapName} isHome={isHome} />
             {children}
             <Footer />
         </>
-    )
-}
+    );
+};
 
 export default PageEnveloper;

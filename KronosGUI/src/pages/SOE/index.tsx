@@ -4,7 +4,7 @@ import Logo from "/Logo.jfif";
 
 const SOE = () => {
     return (
-        <PageEnveloper navProps={{ mapName: "Shadows of Evil", isHome: false }}>
+        <PageEnveloper mapName="Shadows of Evil" isHome={false}>
             <div className="min-h-[92vh]">
                 <Marquee>
                     <img className="h-[92vh]" src={Logo} />

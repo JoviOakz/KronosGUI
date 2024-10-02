@@ -2,7 +2,14 @@ import { CardContainer, ContentWrapper, Description, ImageWrapper, Title, TitleW
 import { Link } from "react-router-dom";
 import Button from "../Button";
 
-const InformationCard = ({ children, mapName, mapImage, ...props }: { children: string, mapName: string, mapImage: string }) => {
+interface IInformationCard {
+    id?: string;
+    children: string;
+    mapName: string;
+    mapImage: string;
+}
+
+const InformationCard: React.FC<IInformationCard> = ({ children, mapName, mapImage, ...props }) => {
     return (
         <CardContainer {...props}>
             <ImageWrapper>

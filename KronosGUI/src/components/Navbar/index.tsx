@@ -1,11 +1,16 @@
 import { Link, useNavigate } from "react-router-dom";
-import Dropdown from 'react-dropdown';
+import Dropdown, { Option } from 'react-dropdown';
 import Logo from "/Logo.jfif";
 import 'react-dropdown/style.css';
 
-const Navbar = ({ mapName, isHome = true }) => {
+interface INavbar {
+    mapName: string;
+    isHome: boolean;
+}
+
+const Navbar: React.FC<INavbar> = ({ mapName, isHome }) => {
     const navigate = useNavigate();
-    const options = [
+    const options: Option[] = [
         { value: 'shadows-of-evil', label: 'Shadows of Evil' },
         { value: 'der-eisendrache', label: 'Der Eisendrache' },
         { value: 'the-giant', label: 'The Giant' },
@@ -14,7 +19,7 @@ const Navbar = ({ mapName, isHome = true }) => {
     ];
     const defaultOption = 'Choose a Map';
 
-    const handleDropdownChange = (option) => {
+    const handleDropdownChange = (option: Option) => {
         navigate(`/${option.value}`);
     };
 
