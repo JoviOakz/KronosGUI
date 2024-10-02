@@ -1,20 +1,20 @@
 import styled from "styled-components";
 
 export const StyledButton = styled.button`
-  padding: 0.8em 1.8em;
-  border: 2px solid #17c3b2;
-  position: relative;
-  overflow: hidden;
-  background-color: transparent;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 16px;
-  transition: 0.3s;
-  z-index: 1;
-  font-family: inherit;
-  color: #17c3b2;
+    padding: 0.8em 1.8em;
+    border: 2px solid #17c3b2;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: 0.3s;
+    z-index: 1;
+    font-family: inherit;
+    color: #17c3b2;
 
-  &::before {
+    &::before {
     content: "";
     width: 0;
     height: 300%;
@@ -26,13 +26,13 @@ export const StyledButton = styled.button`
     transition: 0.5s ease;
     display: block;
     z-index: -1;
-  }
+    }
 
-  &:hover::before {
+    &:hover::before {
     width: 105%;
-  }
+    }
 
-  &:hover {
+    &:hover {
     color: #111;
-  }
-`
+    }
+`;

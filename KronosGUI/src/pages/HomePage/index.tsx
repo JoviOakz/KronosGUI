@@ -1,7 +1,7 @@
+import { CardContainer, CardSection, GetStarted, Spacer } from "./styled.module";
 import PageEnveloper from "../../components/PageEnveloper";
 import Button from "../../components/GetStartedButton"
 import InformationCard from "../../components/InformationCard";
-import Background from "/Home-bg.png";
 import SOE from "/CardMapsImg/SOE-thumb.png";
 import DE from "/CardMapsImg/DE-thumb.webp";
 import TG from "/CardMapsImg/TG-thumb.jfif";
@@ -12,14 +12,16 @@ const HomePage = () => {
     return (
         <PageEnveloper mapName="KronosGUI" isHome={true}>
             <div>
-                <div className="flex justify-center items-center h-[113vh] bg-cover" style={{ backgroundImage: `url(${Background})` }}>
-                    <a href="#scrollDown"><Button>Get started</Button></a>
-                </div>
+                <GetStarted>
+                    <a href="#scrollDown">
+                        <Button>Get started</Button>
+                    </a>
+                </GetStarted>
 
-                <div className="h-[30vh] bg-[#091036]" />
+                <Spacer />
 
-                <div className="bg-gradient-to-b from-[#091036] from-5% via-[#384070] to-[#384070]">
-                    <div className="flex flex-wrap justify-around gap-12 p-8">
+                <CardSection>
+                    <CardContainer>
                         <InformationCard id="scrollDown" mapName={"The Giant"} mapImage={TG}>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt neque arcu, a tempor felis ullamcorper a. Etiam mattis blandit ipsum at ornare. Sed et libero non diam elementum faucibus. Nunc congue eget sapien sed cursus. Nullam massa est, eleifend at velit a, ullamcorper sodales nisi. Morbi volutpat rhoncus nisi sed semper. Vestibulum diam dui, scelerisque quis elit eget, imperdiet elementum nisl. Maecenas vulputate, nunc a congue condimentum, augue diam convallis felis, ac tempus dui nisl id odio. Etiam in ipsum porta est ultrices iaculis a nec risus. Donec elementum dui nunc, sed auctor nulla lobortis euismod. Vestibulum feugiat odio ac laoreet pharetra. Sed mollis ipsum augue, vitae consectetur diam posuere eget. Nam mattis leo at nisl mattis vestibulum. Vivamus gravida lacinia leo, nec facilisis nunc suscipit blandit. Nulla a augue quis est feugiat ornare non sit amet orci. Nullam ullamcorper enim eu nibh imperdiet, in vehicula nulla consequat.
                         </InformationCard>
@@ -35,8 +37,8 @@ const HomePage = () => {
                         <InformationCard mapName={"Gorod Krovi"} mapImage={GK}>
                             Gorod Krovi (City of Blood) is the fifth Zombies map in Black Ops 3. The four travel to a war-torn Stalingrad, in another alternate universe, during a massive battle between several Group 935 controlled Dragons and Russian Giant Robots in search for this universe's Nikolai Belinski.
                         </InformationCard>
-                    </div>
-                </div>
+                    </CardContainer>
+                </CardSection>
             </div>
         </PageEnveloper>
     )

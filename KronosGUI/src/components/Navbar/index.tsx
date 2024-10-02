@@ -1,7 +1,8 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Dropdown, { Option } from 'react-dropdown';
 import Logo from "/Logo.jfif";
 import 'react-dropdown/style.css';
+import { LogoWrapper, NavbarContainer, NavbarContent, NavbarLink, NavbarLinks, NavbarTitle } from "./styled.module";
 
 interface INavbar {
     mapName: string;
@@ -24,22 +25,22 @@ const Navbar: React.FC<INavbar> = ({ mapName, isHome }) => {
     };
 
     return (
-        <div className={`navbar w-full h-[8vh] p-2 ${isHome ? "flex fixed bg-transparent backdrop-blur-sm z-[2]" : "bg-slate-800 flex shadow-md shadow-gray-400"}`}>
-            <div className="flex justify-center w-1/12">
-                <img className="rounded-full" src={Logo} />
-            </div>
+        <NavbarContainer isHome={isHome}>
+            <LogoWrapper>
+                <img src={Logo} />
+            </LogoWrapper>
 
-            <div className="flex justify-between items-center w-10/12">
-                <div className="text-white">{mapName}</div>
+            <NavbarContent>
+                <NavbarTitle>{mapName}</NavbarTitle>
                 <div>
-                    <ul className="flex gap-12 items-center">
-                        <Link className="text-white hover:text-sky-700" to="/">Home</Link>
+                    <NavbarLinks>
+                        <NavbarLink to="/">Home</NavbarLink>
                         <Dropdown options={options} onChange={handleDropdownChange} value={defaultOption} />
-                        <Link className="text-white hover:text-sky-700" to="/">About</Link>
-                    </ul>
+                        <NavbarLink to="/">About</NavbarLink>
+                    </NavbarLinks>
                 </div>
-            </div>
-        </div>
+            </NavbarContent>
+        </NavbarContainer>
     )
 }
 

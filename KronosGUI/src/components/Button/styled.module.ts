@@ -1,23 +1,23 @@
 import styled from "styled-components";
 
 export const StyledButton = styled.button`
-  --color: #40497f;
-  padding: 0.2em 1.4em;
-  background-color: transparent;
-  border-radius: 0.3em;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  transition: 0.5s;
-  font-weight: 400;
-  font-size: 17px;
-  border: 1px solid;
-  font-family: inherit;
-  color: var(--color);
-  z-index: 1;
+    --color: #40497f;
+    padding: 0.2em 1.4em;
+    background-color: transparent;
+    border-radius: 0.3em;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: 400;
+    font-size: 17px;
+    border: 1px solid;
+    font-family: inherit;
+    color: var(--color);
+    z-index: 1;
 
-  &::before,
-  &::after {
+    &::before,
+    &::after {
     content: "";
     display: block;
     width: 50px;
@@ -28,29 +28,29 @@ export const StyledButton = styled.button`
     z-index: -1;
     background-color: var(--color);
     transition: 1s ease;
-  }
+    }
 
-  &::before {
+    &::before {
     top: -1em;
     left: -1em;
-  }
+    }
 
-  &::after {
+    &::after {
     left: calc(100% + 1em);
     top: calc(100% + 1em);
-  }
+    }
 
-  &:hover::before,
-  &:hover::after {
+    &:hover::before,
+    &:hover::after {
     height: 410px;
     width: 410px;
-  }
+    }
 
-  &:hover {
+    &:hover {
     color: #fefefe;
-  }
+    }
 
-  &:active {
+    &:active {
     filter: brightness(0.8);
-  }
-`
+    }
+`;

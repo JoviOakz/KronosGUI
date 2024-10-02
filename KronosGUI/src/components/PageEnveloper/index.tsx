@@ -1,3 +1,4 @@
+import { PageSize } from "./styled.module";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 import { ScrollRestoration } from "react-router-dom";
@@ -14,7 +15,9 @@ const PageEnveloper: React.FC<PageEnveloperProps> = ({ children, mapName, isHome
         <>
             <ScrollRestoration />
             <Navbar mapName={mapName} isHome={isHome} />
-            {children}
+            <PageSize>
+                {children}
+            </PageSize>
             <Footer />
         </>
     );
