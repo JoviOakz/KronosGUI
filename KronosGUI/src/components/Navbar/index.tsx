@@ -42,7 +42,7 @@ const Navbar: React.FC<INavbar> = ({ mapName, isHome }) => {
                     <NavbarLinks>
                         <NavbarLink to="/">Home</NavbarLink>
                         <DropdownContainer>
-                            <DropdownHeader onClick={toggleDropdown}>
+                            <DropdownHeader isOpen={isOpen} onClick={toggleDropdown}>
                                 {selectedMap || "Choose a Map"}
                                 <Arrow isOpen={isOpen}>▼</Arrow>
                             </DropdownHeader>

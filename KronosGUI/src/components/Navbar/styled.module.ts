@@ -38,22 +38,34 @@ export const NavbarTitle = styled.div`
 export const DropdownContainer = styled.div`
     position: relative;
     width: 160px;
+    z-index: 2;
 `;
 
-export const DropdownHeader = styled.div`
+export const DropdownHeader = styled.div<{ isOpen: boolean }>`
     padding: 10px;
-    background-color: #f0f0f0;
+    background-color: #929CD8;
+    border-radius: ${({ isOpen }) => (isOpen ? '15px 15px 0 0' : '15px')};
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: #F0F0F0;
     cursor: pointer;
+
+    &:active {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
 `;
 
 export const DropdownList = styled.ul`
     position: absolute;
     width: 100%;
+    color: #F0F0F0;
     list-style: none;
-    background-color: white;
+    background-color: #929CD8;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    overflow: hidden;
 `;
 
 export const DropdownItem = styled.li`
@@ -61,7 +73,7 @@ export const DropdownItem = styled.li`
     cursor: pointer;
 
     &:hover {
-        background-color: #f0f0f0;
+        background-color: #8287C1;
     }
 `;
 
