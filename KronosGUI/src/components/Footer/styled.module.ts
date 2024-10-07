@@ -19,7 +19,7 @@ export const FlexContainer = styled.div`
 `;
 
 export const Line = styled.div`
-    width: 200px;
+    width: 22%;
     height: 2px;
     background-color: rgba(108, 117, 125, 0.4);
 `;

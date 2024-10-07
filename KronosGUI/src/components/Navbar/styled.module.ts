@@ -22,6 +22,10 @@ export const LogoWrapper = styled.div`
     img {
         border-radius: 50%;
     }
+
+    @media (max-width: 700px) {
+        width: 15%;
+    }
 `;
 
 export const NavbarContent = styled.div`
@@ -29,6 +33,10 @@ export const NavbarContent = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 700px) {
+        width: 80%;
+    }
 `;
 
 export const NavbarTitle = styled.div`
@@ -86,6 +94,14 @@ export const NavbarLinks = styled.ul`
     display: flex;
     gap: 3rem;
     align-items: center;
+
+    @media (max-width: 700px) {
+        gap: 2rem;
+    }
+
+    @media (max-width: 570px) {
+        gap: 1rem;
+    }
 `;
 
 export const NavbarLink = styled(Link)`

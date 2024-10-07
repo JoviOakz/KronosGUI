@@ -6,7 +6,8 @@ import SOE from "/CardMapsImg/SOE-thumb.png";
 import DE from "/CardMapsImg/DE-thumb.webp";
 import TG from "/CardMapsImg/TG-thumb.jfif";
 import ZS from "/CardMapsImg/ZS-thumb.jpg";
-import GK from "/CardMapsImg/GK-thumb.jpg"
+import GK from "/CardMapsImg/GK-thumb.jpg";
+import RE from "/CardMapsImg/RE-thumb.jpg";
 
 const HomePage = () => {
     return (
@@ -23,19 +24,22 @@ const HomePage = () => {
                 <CardSection>
                     <CardContainer>
                         <InformationCard id="scrollDown" mapName={"Shadows of Evil"} mapImage={SOE}>
-                            Shadows of Evil is the eighteenth (chronologically third) Zombies map. It is the first Zombies map in Black Ops 3. The setting takes place in the fictional city of Morg City, from the 1940s, where it introduces four new characters, Nero Blackstone, Jessica Rose, Jack Vincent and Floyd Campbell as they are transported to a nightmarish realm by the Shadow Man, a supernatural being, leader of the Apothicons.
+                            Shadows of Evil is set in a noir city from the 1940s, four strangers - a boxer, a femme fatale, a detective, and a magician - are brought into a parallel dimension. They are trapped in a dark nightmare and must face hordes of zombies while being manipulated by a mysterious entity. Each character harbors a dark past and must fight for redemption, uncovering secrets and completing rituals to escape the cursed city.
                         </InformationCard>
                         <InformationCard mapName={"The Giant"} mapImage={TG}>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt neque arcu, a tempor felis ullamcorper a. Etiam mattis blandit ipsum at ornare. Sed et libero non diam elementum faucibus. Nunc congue eget sapien sed cursus. Nullam massa est, eleifend at velit a, ullamcorper sodales nisi. Morbi volutpat rhoncus nisi sed semper. Vestibulum diam dui, scelerisque quis elit eget, imperdiet elementum nisl. Maecenas vulputate, nunc a congue condimentum, augue diam convallis felis, ac tempus dui nisl id odio. Etiam in ipsum porta est ultrices iaculis a nec risus.
+                            In The Giant, the iconic heroes Richtofen, Dempsey, Takeo, and Nikolai return to the Nazi weapons factory, the site of the zombie threat. Set at the end of World War II, the map follows a time-traveling storyline where the protagonists must fight to survive against endless waves of the undead while uncovering the dark secrets hidden within the ruins of the complex. With powerful weapons and hidden challenges, The Giant challenges players to survive and alter the course of history.
                         </InformationCard>
                         <InformationCard mapName={"Der Eisendrache"} mapImage={DE}>
-                            Der Eisendrache (The Iron Dragon) is the third Zombies map in Black Ops 3. The Primis crew must go to this elusive castle located in the Austrian Alps, in order to retrieve Ultimis Dempsey’s soul. This castle was occupied by members of Group 935 and was dubbed “Griffin Castle” by its members, two most notable members were Dr. Edward Richtofen and Dr. Maxis. The castle was used for rocket testing purposes as well as developing the Wunder Sphere and even creating a Death Ray.
+                            Der Eisendrache is set in an Austrian castle during World War II, the heroes Richtofen, Dempsey, Takeo, and Nikolai are sent to disrupt the dark experiments of a Nazi facility. The castle is filled with ancient secrets, such as powerful elemental bows and mysterious mechanisms. As they face hordes of the undead and monstrous creatures, the protagonists must uncover the facility’s dark purpose and prevent the destruction of the world.
                         </InformationCard>
                         <InformationCard mapName={"Zetsubou no Shima"} mapImage={ZS}>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt neque arcu, a tempor felis ullamcorper a. Etiam mattis blandit ipsum at ornare. Sed et libero non diam elementum faucibus. Nunc congue eget sapien sed cursus. Nullam massa est, eleifend at velit a, ullamcorper sodales nisi. Morbi volutpat rhoncus nisi sed semper. Vestibulum diam dui, scelerisque quis elit eget, imperdiet elementum nisl. Maecenas vulputate, nunc a congue condimentum, augue diam convallis felis, ac tempus dui nisl id odio. Etiam in ipsum porta est ultrices iaculis a nec risus.
+                            Zetsubou no Shima is set on a remote Pacific island during World War II, the heroes Richtofen, Dempsey, Takeo, and Nikolai face the horrors of genetic experiments conducted by a secret group, Division 9, which resulted in monstrous mutations and hordes of zombies. Amid dense jungles, abandoned laboratories, and biological dangers, the protagonists must fight for survival while uncovering dark secrets and trying to prevent a global catastrophe.
                         </InformationCard>
                         <InformationCard mapName={"Gorod Krovi"} mapImage={GK}>
-                            Gorod Krovi (City of Blood) is the fifth Zombies map in Black Ops 3. The four travel to a war-torn Stalingrad, in another alternate universe, during a massive battle between several Group 935 controlled Dragons and Russian Giant Robots in search for this universe's Nikolai Belinski.
+                            Gorod Krovi is set in a devastated city in Russia during an alternate war, the heroes Richtofen, Dempsey, Takeo, and Nikolai are transported to this nightmarish scenario, where they face not only hordes of zombies but also mechanical dragons and mutated soldiers. As they explore the ruined city, the protagonists must uncover the secrets of Division 9 and confront the horrors of their own pasts, fighting to escape this world of destruction and chaos.
+                        </InformationCard>
+                        <InformationCard mapName={"Revelations"} mapImage={RE}>
+                            Revelations is set in a distorted and surreal world, the four protagonists – Richtofen, Dempsey, Takeo, and Nikolai – find themselves in an environment that combines elements from several previous maps in the series. In this setting, they must face hordes of zombies and multifaceted challenges while trying to uncover the mysteries of the saga's history, including the origin of the zombies and the secrets of their own journeys.
                         </InformationCard>
                     </CardContainer>
                 </CardSection>

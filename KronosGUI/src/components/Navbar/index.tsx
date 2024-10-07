@@ -19,7 +19,8 @@ const Navbar: React.FC<INavbar> = ({ mapName, isHome }) => {
         { value: 'the-giant', label: 'The Giant' },
         { value: 'der-eisendrache', label: 'Der Eisendrache' },
         { value: 'zetsubou-no-shima', label: 'Zetsubou no Shima' },
-        { value: 'gorod-krovi', label: 'Gorod Krovi' }
+        { value: 'gorod-krovi', label: 'Gorod Krovi' },
+        { value: 'revelations', label: 'Revelations' }
     ];
 
     const toggleDropdown = () => setIsOpen(!isOpen);

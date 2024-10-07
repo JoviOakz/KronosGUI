@@ -5,6 +5,7 @@ import TG from "../pages/TG";
 import DE from "../pages/DE";
 import ZS from "../pages/ZS";
 import GK from "../pages/GK";
+import RE from "../pages/RE";
 
 export const routes = createBrowserRouter([
     {
@@ -30,5 +31,9 @@ export const routes = createBrowserRouter([
       {
         path: "/gorod-krovi",
         element: <GK />,
+      },
+      {
+        path: "/revelations",
+        element: <RE />,
       }
 ]);
